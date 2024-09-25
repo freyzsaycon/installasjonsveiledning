@@ -1,7 +1,7 @@
-Installasjonsveiledning for å sette up Raspberry Pi 4
+# Installasjonsveiledning for å sette up Raspberry Pi 4
 
 
-Hvordan å sette opp OS
+## Hvordan å sette opp OS
 
 1. Installer Raspberry Pi Imager på PCen din fra https://www.raspberrypi.com/software/ og klikk "Download for Windows". (Eller annet noe annet, hvis du ikke bruker Windows.)
 2. Legg inn SD kortet fra Raspberry Pien til SD leseren på PCen/Laptopen.
@@ -16,12 +16,12 @@ Hvordan å sette opp OS
 11. Når installasjonen er ferdig, ta SD kortet ut og legg den inn tilbake til Raspberry Pien.
 12. Følg instruksjonene på Pien for å installere ferdig OS.
 
-Hvordan å installere programmer på Ubuntu
+## Hvordan å installere programmer på Ubuntu
 
 1. Åpne terminalen (Ctrl + alt + T)
 2. I terminalen skriv i følgende rekkefølge:
    - sudo apt update
-   - sudo apt upgrade
+   - sudo apt upgrade (Hvis du får en feil melding, så prøv å sjekk om du har nett også prøv igjen.)
    
 4. Nå skal vi installere brannmur via terminalen.
 5. I terminalen skriv i følgende rekkefølge:
@@ -35,4 +35,17 @@ Hvordan å installere programmer på Ubuntu
    - sudo apt install openssh-server
    - sudo systemctl enable ssh
    - sudo systemctl start ssh
+  
+8. Nå skal vi installere Git, Python og MariaDB
+9. I terminalen skriv i følgende rekkefølge:
+    - sudo apt install python3-pip
+    - sudo apt install git
+    - sudo apt install mariadb-server
+    - sudo mysql_secure_installation
+  
+10. Til slutt gjør steg 2 på nytt
+
+## Hvordan å sette opp database
+
+   
    
