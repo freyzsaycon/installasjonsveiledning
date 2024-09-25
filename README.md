@@ -11,3 +11,5 @@ Hvordan å sette opp OS
 7. På "Operating System" bla litt ned til du finner "Other general-purpose OS" og velg Ubuntu (Velg den øverste valget som er 64 bit).
 8. På "Choose Storage" velg SD kortet som du satt inn.
 9. Klikk "Next" også trykk "Yes".
+10. Vent til installasjonen er ferdig.
+11. Når installasjonen er ferdig, ta SD kortet ut og legg den inn tilbake til Raspberry Pien.
