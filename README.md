@@ -30,9 +30,9 @@ Hvordan å installere programmer på Ubuntu
    sudo ufw allow ssh
    sudo ufw status (Bare for å sjekke om brannmuren er aktivert.)
 
-   6. Nå skal vi installere ssh via terminalen.
-   7. I terminalen skriv i følgende rekkefølge:
-      sudo apt install openssh-server
-      sudo systemctl enable ssh
-      sudo systemctl start ssh
+6. Nå skal vi installere ssh via terminalen.
+7. I terminalen skriv i følgende rekkefølge:
+   sudo apt install openssh-server
+   sudo systemctl enable ssh
+   sudo systemctl start ssh
    
