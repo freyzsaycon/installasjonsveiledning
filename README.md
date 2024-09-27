@@ -45,7 +45,19 @@
   
 10. Til slutt gjør steg 2 på nytt
 
-## Hvordan å sette opp database
+## Hvordan å lage bruker i Database
 
-   
+1. For å lage en **admin bruker** i MariaDB så skriver vi følgende:
+   - sudo mariadb (For å logge inn i admin bruker første gang)
+   - CREATE USER 'brukernavn'@'%' IDENTIFIED BY 'passord'; (Lager en bruker i MariaDB)
+   - GRANT ALL PRIVILEGES ON *.* TO 'brukernavn'@'%' IDENTIFIED BY 'passord'; (Gir **admin rettigheter** til brukeren)
+   - FLUSH PRIVILEGES;
+  
+2. For å lage en **slutt bruker med bare lese tilgang** i MariaDB så skriver vi følgende:
+   - sudo mariadb (For å logge inn i admin bruker første gang)
+   - CREATE USER 'brukernavn'@'%' IDENTIFIED BY 'passord'; (Lager en bruker i MariaDB)
+   - GRANT SELECT ON *.* TO 'brukernavn'@'%' IDENTIFIED BY 'passord'; (Gir **lese rettigheter** til brukeren)
+   - FLUSH PRIVILEGES;
+  
+
    
