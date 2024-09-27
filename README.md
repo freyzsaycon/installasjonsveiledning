@@ -58,6 +58,15 @@
    - CREATE USER 'brukernavn'@'%' IDENTIFIED BY 'passord'; (Lager en bruker i MariaDB)
    - GRANT SELECT ON *.* TO 'brukernavn'@'%' IDENTIFIED BY 'passord'; (Gir **lese rettigheter** til brukeren)
    - FLUSH PRIVILEGES;
+
+3. Nå kan vi logge inn med brukeren vår. Skriv følgende:
+   - exit (Hvis du er fortsatt i MariaDB superbrukeren etter å ha lagd de andre brukerene.)
+   - sudo mariadb -u brukernavn -p (Her logger vi inn med brukernavnet med "-u" og skriver "-p" for å skrive passordet.)
   
+
+
+
+
+   
 
    
