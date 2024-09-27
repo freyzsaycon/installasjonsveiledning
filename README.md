@@ -62,10 +62,43 @@
 3. Nå kan vi logge inn med brukeren vår. Skriv følgende:
    - exit (Hvis du er fortsatt i MariaDB superbrukeren etter å ha lagd de andre brukerene.)
    - sudo mariadb -u brukernavn -p (Her logger vi inn med brukernavnet med "-u" og skriver "-p" for å skrive passordet.)
-  
 
+## Lage telefonkatalog database
 
+1. Først skal vi lage databasen. Skriv dette i MariaDB:
+```
+CREATE DATABASE telefonkatalog;
+```
 
+2. Deretter skal vi lage en tabell innen databasen. Skriv dette i MariaDB:
+```
+CREATE TABLE person (
+    id int NOT NULL AUTO_INCREMENT,
+    fornavn VARCHAR(255) NOT NULL,
+    etternavn VARCHAR(255) NOT NULL,
+    telefonnummer CHAR(8),
+    PRIMARY KEY (id)
+);
+```
+3. Nå skal vi legge til testdata inne i tabellen. Skriv dette i MariaDB:
+```
+INSERT INTO person (fornavn, etternavn, telefonnummer)
+VALUES ('Erik', 'Perik', '12345678');
+INSERT INTO person (fornavn, etternavn, telefonnummer)
+VALUES ('Lise', 'Pise', '22334455');
+INSERT INTO person (fornavn, etternavn, telefonnummer)
+VALUES ('Testus', 'Jensen', '11114444');
+INSERT INTO person (fornavn, etternavn, telefonnummer)
+VALUES ('Knut', 'Donald', '31415926');
+```
+
+4. Til slutt så skal vi velge noen data fra telefonkatalogen. Skriv dette i MariaDB:
+```
+SELECT * FROM person;
+SELECT fornavn, telefonnummer FROM person;
+SELECT * FROM person WHERE fornavn = "Erik";
+SELECT telefonnummer FROM person WHERE fornavn = "Lise" AND etternavn = "Pise";
+``` 
 
    
 
